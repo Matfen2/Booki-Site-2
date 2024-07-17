@@ -33,6 +33,7 @@ header {
 nav {
   padding: 15px 0px 50px 0px;
   display: flex;
+  gap: 72%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -40,19 +41,20 @@ nav {
 
 /* Logo */
 .bookiLogo {
-    height: 20px;
-    width: 70px;
+  height: 20px;
+  width: 40%;
+  max-width: 70px;
 }
 
 /* Href */
 .listHref {
-    margin-top: -38px;
-    margin-right: -40px;
-    display: flex;
-    column-gap: 60px;
-    position: relative;
-    flex-direction: row;
-    list-style-type: none;
+  width: 50%;
+  display: flex;
+  margin-top: -37px;
+  column-gap: 50px;
+  position: relative;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 .href-link {
@@ -108,6 +110,7 @@ nav {
 
 /* Location */
 .searchCity {
+  width: 40%;
   display: flex;
   margin: 30px auto;
   margin-left: 5px;
@@ -133,7 +136,6 @@ nav {
 
 #city {
   height: 37px;
-  width: 182px;
   padding: 0 5px;
   border-radius: 0;
   font-size: 1em;
@@ -525,9 +527,12 @@ footer {
 
 
 @media (max-width: 1024px) {
+  nav {
+    gap: 62%;
+  }
+
   .listHref {
     column-gap: 30px;
-    margin-right: -60px;
   }
 
   .href-link {
@@ -624,13 +629,13 @@ footer {
   /* Href */
   .listHref {
     margin-top: 40px; 
-    margin-left: -120px;
-    column-gap: 75px;
+    margin-left: -90px;
+    column-gap: 45px;
     width: 100%; 
   }
 
   .href-item {
-    width: 100%;
+    width: 50%;
     font-size: 1.3em; 
   }
 
@@ -641,7 +646,7 @@ footer {
   }
 
   .href-link:hover::before {
-    width: 101%;
+    width: 85%;
     bottom: -140%;
   }
 
@@ -660,42 +665,45 @@ footer {
   }
 
   /* Location */
+  .searchCity {
+    flex-direction: row;
+    width: 90%;
+    padding: 10px;
+  }
+
   #btnLocation {
-    width: 50px;
-    height: 50px;
-    padding: 20px;
+    height: 48px;
+    margin: 0 0 10px 0;
   }
 
-  #btnLocation .fa-location-dot {
-    font-size: 1.4em;
-  }
+    #btnSearch {
+      height: 48px;
+      width: 100%;
+      max-width: 50px;
+      margin-top: -10px;
+      border-radius: 15px;
+    }
 
-  #city {
-    height: 47px;
-    width: 240px;
-  }
+    #btnSearch::after {
+      content: "";
+    }
 
-  #btnSearch {
-    width: 50px;
-    height: 50px;
-    padding: 20px;
-    margin-left: -10px;
-    border-radius: 15px;
-  }
+    #btnSearch i {
+      color: azure;
+      font-size: 1.2em;
+      display: inline-block;
+    }
 
-  #btnSearch::after {
-    content: "";
-  }
+    #btnSearch span {
+      display: none;
+    }
 
-  #btnSearch i {
-    color: azure;
-    font-size: 1.2em;
-    display: inline-block;
-  }
-
-  #btnSearch span {
-    display: none;
-  }
+    #city {
+      height: 46px;
+      width: 110%;
+      margin-top: -10px;
+      background-color: #fff;
+    }
 
   /* Filter */
   .filter {
@@ -720,11 +728,11 @@ footer {
 
   .btnFilter span {
     margin-left: -1px;
-    font-size: 0.90em;
+    font-size: 1.00em;
   }
 
   .fa-heart, .fa-money-bill-wave, .fa-person, .fa-fire {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   /* Info */
@@ -828,6 +836,48 @@ footer {
   }
 }
 
-@media (max-width: 425px) {
- 
+@media (max-width: 550px) {
+  .btnFilter {
+    width: 130px;
+  }
+}
+
+@media (max-width: 432px) {
+  .listHref {
+    column-gap: 40px;
+  }
+
+  .href-link {
+    font-size: 0.8em;
+  }
+
+  .listBtnFilters {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btnFilter {
+    width: 150px;
+  }
+
+  .btnFilter span {
+    font-size: 1.05em; 
+    margin-top: 0px ;  
+  }
+
+  .fa-heart, .fa-money-bill-wave, .fa-person, .fa-fire {
+    font-size: 1.05em;
+  }
+
+  .mission h3 {
+    font-size: 1.1em;
+  }
+
+  .mission p {
+    font-size: 1.0em;
+  }
+
+  .listPointKey .card-footer h4 {
+    font-size: 0.60em;
+  }
 }
