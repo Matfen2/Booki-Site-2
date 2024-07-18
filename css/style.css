@@ -48,13 +48,13 @@ nav {
 
 /* Href */
 .listHref {
-  width: 50%;
-  display: flex;
-  margin-top: -37px;
-  column-gap: 50px;
-  position: relative;
-  flex-direction: row;
-  list-style-type: none;
+    margin-top: -38px;
+    margin-right: -40px;
+    display: flex;
+    column-gap: 60px;
+    position: relative;
+    flex-direction: row;
+    list-style-type: none;
 }
 
 .href-link {
@@ -110,12 +110,11 @@ nav {
 
 /* Location */
 .searchCity {
-  width: 40%;
   display: flex;
   margin: 30px auto;
   margin-left: 5px;
   align-items: center;
-  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 #btnLocation {
@@ -135,6 +134,7 @@ nav {
 }
 
 #city {
+  width: 157px;
   height: 37px;
   padding: 0 5px;
   border-radius: 0;
@@ -180,19 +180,24 @@ nav {
 
 .listBtnFilters {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 14px; 
-  margin-left: 15px;
+  gap: 2%;
+  margin-left: 17px;
+  flex-wrap: nowrap;
+}
+
+.listBtnFilters button {
+  width: 25%;
 }
 
 .btnFilter {
+  height: 40px;
   display: flex;
   flex-direction: row;
-  align-items: center; 
+  align-items: center;
   border-radius: 25px;
-  border: 1px solid #d9d9d9; 
-  padding: 10px 14px; 
-  cursor: pointer; 
+  border: 1px solid #d9d9d9;
+  padding: 2px 17px;
+  cursor: pointer;
 }
 
 #btnEconomique:hover {
@@ -213,15 +218,19 @@ nav {
 
 .btnFilter i {
   margin-right: 10px; 
+  margin-bottom: -2px;
+}
+
+.btnFilter p {
+  font-size: 1.00em;
 }
 
 .btnFilter span {
-  font-size: 1.05em; 
-  margin-top: 0px ;  
+  font-size: 1.03em;
 }
 
 .fa-heart, .fa-money-bill-wave, .fa-person, .fa-fire {
-  font-size: 1.45em;
+  font-size: 1.40em;
 }
 
 /* Info */
@@ -628,26 +637,25 @@ footer {
 
   /* Href */
   .listHref {
-    margin-top: 40px; 
-    margin-left: -90px;
-    column-gap: 45px;
-    width: 100%; 
+    width: 80%;
+    margin: 30px auto;
+    margin-left: -10px;
+    column-gap: 45%;
+    justify-content: center;
   }
 
   .href-item {
     width: 50%;
-    font-size: 1.3em; 
-  }
-
-  .href-link {
-    display: block;
-    width: 100%;
-    text-align: center; 
+    font-size: 1.1em; 
   }
 
   .href-link:hover::before {
-    width: 85%;
+    width: 175%;
     bottom: -140%;
+  }
+
+  .href-link.active::before {
+    width: 130%;
   }
 
   /* Mission */
@@ -666,73 +674,74 @@ footer {
 
   /* Location */
   .searchCity {
-    flex-direction: row;
-    width: 90%;
-    padding: 10px;
+    flex-wrap: wrap;
   }
 
   #btnLocation {
-    height: 48px;
-    margin: 0 0 10px 0;
+    width: 8%;
   }
 
-    #btnSearch {
-      height: 48px;
-      width: 100%;
-      max-width: 50px;
-      margin-top: -10px;
-      border-radius: 15px;
-    }
+  #city {
+    width: 96%;
+    font-size: 1em;
+    max-width: 350px;
+  }
 
-    #btnSearch::after {
-      content: "";
-    }
+  #btnSearch span {
+    display: none;
+  }
 
-    #btnSearch i {
-      color: azure;
-      font-size: 1.2em;
-      display: inline-block;
-    }
+  #btnSearch {
+    width: 8%;
+    padding: 20px;
+    margin-left: -10px;
+    border-radius: 15px;
+  }
 
-    #btnSearch span {
-      display: none;
-    }
+  #btnSearch::after {
+    content: "";
+  }
 
-    #city {
-      height: 46px;
-      width: 110%;
-      margin-top: -10px;
-      background-color: #fff;
-    }
+  #btnSearch i {
+    color: azure;
+    font-size: 1.0em;
+    display: inline-block;
+  }
+
+  #btnSearch span {
+    display: none;
+  }
 
   /* Filter */
   .filter {
-    margin-top: -16px;
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-  }
-
-  .filter .filt {
-    font-size: 0.95em;
+    flex-direction: column;
   }
 
   .listBtnFilters {
-    margin-left: 2px;
-    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -14px;
+    justify-content: center; 
   }
 
-  .btnFilter {
-    padding: 10px 12px;
+  .listBtnFilters button {
+    width: 47%;
+    margin-top: 20px;
+    padding: 2px 19px;
   }
-
-  .btnFilter span {
-    margin-left: -1px;
+  
+  .btnFilter p {
     font-size: 1.00em;
   }
 
+  .btnFilter span {
+    font-size: 0.93em;
+  }
+
   .fa-heart, .fa-money-bill-wave, .fa-person, .fa-fire {
-    font-size: 1.4em;
+    font-size: 1.40em;
   }
 
   /* Info */
@@ -836,48 +845,51 @@ footer {
   }
 }
 
-@media (max-width: 550px) {
-  .btnFilter {
-    width: 130px;
-  }
-}
-
-@media (max-width: 432px) {
+@media (max-width: 425px) {
   .listHref {
-    column-gap: 40px;
+    width: 60%;
   }
 
-  .href-link {
-    font-size: 0.8em;
+  #btnLocation {
+    width: 14%;
+  }
+
+  #city {
+    width: 96%;
+  }
+
+  #btnSearch {
+    width: 12%;
   }
 
   .listBtnFilters {
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 4%;
+    margin-top: -8px;
   }
 
-  .btnFilter {
-    width: 150px;
+  .listBtnFilters button {
+    width: 47%;
+    margin-top: 15px;
+    padding: 2px 14px;
+  }
+  
+  .btnFilter p {
+    font-size: 0.90em;
   }
 
   .btnFilter span {
-    font-size: 1.05em; 
-    margin-top: 0px ;  
+    font-size: 0.83em;
   }
 
   .fa-heart, .fa-money-bill-wave, .fa-person, .fa-fire {
-    font-size: 1.05em;
+    font-size: 1.40em;
   }
 
   .mission h3 {
-    font-size: 1.1em;
+    font-size: 1.23em;
   }
 
   .mission p {
     font-size: 1.0em;
-  }
-
-  .listPointKey .card-footer h4 {
-    font-size: 0.60em;
   }
 }
